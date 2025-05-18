@@ -3,6 +3,8 @@ import './Home.css'
 import axios from 'axios'
 import toast, { Toaster } from "react-hot-toast"
 import FilmCard from '../../components/FilmCards/FilmCard'
+import MovieImg from './../../assets/add-movie.png'
+import { Link } from 'react-router-dom'
 
 function Home() {
   const [films, setFilms] = useState([])
@@ -22,7 +24,7 @@ function Home() {
   }, [])
   return (
     <>
-      <div>Home</div>
+      <div className='heading'><b>FUJI FILM</b></div>
       {
         films.map((film, index) => {
           const {
@@ -50,6 +52,9 @@ function Home() {
         })
       }
       <Toaster />
+      <Link to= "/add-film">
+      <img src={MovieImg} className='add-movie-img' alt='movie-icon'></img>
+      </Link>
     </>
   )
 }

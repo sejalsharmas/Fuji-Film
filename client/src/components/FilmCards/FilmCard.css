@@ -1,3 +1,77 @@
 .filmcard{
+    padding: 10px;
+    margin: 10px;
     border:1px, solid, black;
+    width: 96%;
+    border-radius: 10px;
+   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+   display: flex;
+   background-color: white;
+   margin-top: 50px;
+   position: relative;
+}
+.film-card-poster{
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    display: block ;
+    margin: 0 auto;
+}
+.film-card-info{
+    margin-left: 20px;
+}
+.director{
+    margin-right: 40px;
+    margin-left: 20px;
+    display: flex;
+    width: 180px;
+    align-items: center;
+    font-size: 18px;
+}
+.year{
+     display: flex;
+    align-items: center;
+    font-size: 18px;
+}
+.film-info-icon{
+    height: 40px;
+}
+.stars{
+     height: 90px;
+     margin-left: 20px;
+     top: 10px;
+     right: 10px;
+}
+.Rating{
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+}
+.film-card-info-details{
+    display: flex;
+}
+.hindi{
+    margin-right: 40px;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+}
+.film-details{
+    display: flex;
+}
+.category{
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+}
+.describe{
+    font-size: 20px;
+    margin: 20px;
+    width:80%;
+}
+.btn-row{
+    display: flex;
+    margin-top: 250px;
+    gap: 10px;
 }

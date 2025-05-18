@@ -1,0 +1,12 @@
+.add-movie-img{
+    height:60px;
+    position:fixed;
+    top: 20px;
+    right: 30px; 
+}
+.heading{
+    font-size: 40px;
+    display: block;
+    text-align: center;
+
+}
