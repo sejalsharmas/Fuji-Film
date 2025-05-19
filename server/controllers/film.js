@@ -31,9 +31,9 @@ const getFilm = async(req,res) =>{
 }
 
 const getFilmByTitle = async(req,res)=>{
-    const title = req.params.title;
+    const {id} = req.params
     try{
-    const film = await Film.findOne({title:title}).select("-__v -createdAt -updatedAt");
+    const film = await Film.findOne(req.params.id).select("-__v -createdAt -updatedAt");
      if(film){
         return res.status(200).json({success:true, message:"Film Fetched", data:film})
      }
@@ -87,7 +87,16 @@ const updateFilmById = async(req,res)=>{
         language:language,
         rating:rating
     });
-     return res.status(200).json({success:true, message:"Film info updated Successfully", data: updateFilm})
+     return res.status(200).json({success:true, message:"Film info updated Successfully", data: {
+        title:title,
+        shortDescription:shortDescription,
+        director:director,
+        poster:poster,
+        year:year,
+        genre:genre,
+        language:language,
+        rating:rating
+     }})
 }catch(err){
     return res.status(400).json({success:false, message:"Error Updating Film", data:null})
 }

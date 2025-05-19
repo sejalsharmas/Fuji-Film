@@ -63,7 +63,7 @@ function FilmCard({
       <div className='btn-row'>
          <div className='edit-btn'>
           <Button title= "Edit"  
-          onClick={() => {navigate(`/film/edit/${title}`)}}/>
+          onClick={() => {navigate(`/film/edit/${_id}`)}}/>
          </div>
          <div className='delete-btn'>
        <Button
